@@ -1,0 +1,21 @@
+services:
+  backend:
+    build: ./backend
+    container_name: uptime-backend
+    volumes:
+      - uptime_data:/data
+    ports:
+      - "8000:8000"
+    restart: unless-stopped
+
+  frontend:
+    build: ./frontend
+    container_name: uptime-frontend
+    depends_on:
+      - backend
+    ports:
+      - "3000:80"
+    restart: unless-stopped
+
+volumes:
+  uptime_data:

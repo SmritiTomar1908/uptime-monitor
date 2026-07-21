@@ -1,0 +1,47 @@
+:root {
+  font-family: Inter, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  color: #172033;
+  background: #f4f7fb;
+  font-synthesis: none;
+}
+
+* { box-sizing: border-box; }
+body { margin: 0; min-width: 320px; min-height: 100vh; }
+button, input { font: inherit; }
+button { cursor: pointer; }
+
+.container { max-width: 1100px; margin: 0 auto; padding: 48px 20px 80px; }
+header { display: flex; justify-content: space-between; align-items: flex-end; gap: 24px; margin-bottom: 28px; }
+h1 { margin: 4px 0 6px; font-size: clamp(2rem, 5vw, 3.5rem); }
+.eyebrow { margin: 0; font-size: .75rem; font-weight: 800; letter-spacing: .16em; color: #4d63d2; }
+.subtitle { margin: 0; color: #667085; }
+.summary { background: white; border: 1px solid #dbe2ef; border-radius: 999px; padding: 10px 16px; white-space: nowrap; }
+
+.add-form { display: flex; gap: 10px; margin-bottom: 22px; }
+.add-form input { flex: 1; padding: 14px 16px; border: 1px solid #cfd8e8; border-radius: 12px; outline: none; }
+.add-form input:focus { border-color: #4d63d2; box-shadow: 0 0 0 3px rgba(77,99,210,.12); }
+.add-form button { border: 0; border-radius: 12px; padding: 0 22px; background: #263fb5; color: white; font-weight: 700; }
+
+.error { margin-bottom: 18px; padding: 12px 14px; border-radius: 10px; background: #feecec; color: #a22626; }
+.empty { padding: 50px; text-align: center; border: 1px dashed #bac5d6; border-radius: 18px; color: #667085; }
+.grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 16px; }
+.card { background: white; border: 1px solid #dbe2ef; border-radius: 18px; padding: 20px; box-shadow: 0 7px 24px rgba(20,34,66,.05); }
+.card-top, .actions { display: flex; align-items: center; justify-content: space-between; gap: 10px; }
+.badge { display: inline-flex; padding: 6px 10px; border-radius: 999px; font-size: .75rem; font-weight: 800; }
+.badge.up { background: #dcfce7; color: #11733b; }
+.badge.down { background: #fee2e2; color: #a32626; }
+.badge.pending { background: #fff3cd; color: #8a6500; }
+.response-time { color: #475467; font-weight: 700; }
+.url { display: block; margin: 20px 0 16px; color: #263fb5; font-weight: 700; overflow-wrap: anywhere; }
+.details { display: grid; gap: 6px; color: #667085; font-size: .9rem; }
+.check-error { color: #a32626; background: #fff4f4; border-radius: 8px; padding: 9px; overflow-wrap: anywhere; font-size: .82rem; }
+.actions { margin-top: 18px; justify-content: flex-start; }
+.actions button { border-radius: 9px; padding: 9px 12px; font-weight: 700; }
+.secondary { border: 1px solid #cdd6e5; background: white; color: #344054; }
+.danger { border: 0; background: #fff0f0; color: #b42318; }
+
+@media (max-width: 650px) {
+  header { align-items: flex-start; flex-direction: column; }
+  .add-form { flex-direction: column; }
+  .add-form button { padding: 14px; }
+}
